@@ -4,7 +4,7 @@ This code hav been developed following my need to generate or compute large data
 Parameter must be written in [config file](configs/INSTALL.md)
 python main.py -cd config_downloader.yaml 
 
-More info : [docs/INSTALL.md](docs/INSTALL.md)
+More info : [docs/INFO.md](docs/INFO.md)
 
 ## Installation
 ### Global: part 1
