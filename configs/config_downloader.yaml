@@ -1,0 +1,49 @@
+API_PARAM:
+  NEED: "yes" 
+  KEY: "KEY"
+  SECRET: "SECRET"
+  img_per_specie: 500
+  TYPE: "flickr"
+API_SIZES:
+  MIN_SIZE: 640
+  MAX_SIZE: 800
+  ORIGINAL_SIZE: "no"
+SPECIES: 
+  LIST:
+    - "suit"
+PATH:
+  DATAPATH: "/home/pc/Documents/IMKI/tech.imki.dataset-gen/data/"
+  OUTPUTPATH: "results/"
+BBOX:
+  EXTRACT: "yes"
+  JSON: "yes"
+  VIS_PRED: "yes"
+  TRESH: 0.8
+  MIN_SIZE: 30
+RESIZE:
+  NEED: "yes"
+  SIZE: "300x300"
+  PATH: "bbox/crop"
+  INTERPOLATION: 2
+POSE_ESTIMATION:
+  NEED: "yes"
+  PATH: "bbox/crop_resize"
+  SAVE:
+    RGB: "yes"
+    BLACK: "yes"
+    OTHER: "no"
+    PATH_OTHER: "/home/pc/Documents/IMKI/tech.imki.dataset-gen/data/soccer/essais/"
+    JSON: "yes"
+  MODEL: 17   #17, 26, 136
+  DRAW:
+    THICKNESS: 1
+    TRESH: 0.5
+    ONLY_ONE: "yes"
+  
+
+  
+  
+    
+
+
+

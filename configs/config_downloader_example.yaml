@@ -1,0 +1,53 @@
+#If dataset already exist images have to be in DATAPATH/name_species/raw/
+## DOWNLOADER
+API_PARAM:
+  NEED: "yes" # if needed image are downloaded in DATAPATH/name_species/raw else nothing
+  KEY: "KEY"
+  SECRET: "SECRET"
+  img_per_specie: 100
+  TYPE: "flickr" # flickr, google, ... only flickr implemented actually
+API_SIZES:
+  MIN_SIZE: 640 # [4096,3072,2048,1600,1024,800,640,400,320,240,100] # available size on flickr
+  MAX_SIZE: 800
+  ORIGINAL_SIZE: "no" # if yes images are only downloaded in their native size
+
+SPECIES: 
+  LIST:         # list of subfolders to compute
+    - "suit"
+    - "neymar"  
+
+PATH:
+  DATAPATH: "/home/pc/Documents/IMKI/tech.imki.dataset-gen/data/" #global path containing subfolders name_species
+  OUTPUTPATH: "results/"
+
+RESIZE:
+  NEED: "yes" 
+  SIZE: "1920x1080" #new_width x new_heigth
+  PATH: "raw" # specifie which images to resize DATAPATH/name_species/ option are raw or crop (crop is to resize bbox extract)
+  INTERPOLATION: 0 # 0=cv2.INTER_NEAREST, 1=cv2.INTER_LINEAR, 2=cv2.INTER_CUBIC, 3=cv2.INTER_AREA, 4=cv2.INTER_LANCZOS4
+  
+BBOX:
+  EXTRACT: "yes" #results save in DATAPATH/name_species/crop. Input image have to be in DATAPATH/name_species/raw
+  JSON: "no"
+  VIS_PRED: "yes" # save images with prediction draw on it
+  TRESH: 0.8
+  MIN_SIZE: 80 # Minimum size of the bbox compare to the input in percentage
+
+# Pas inclus encore dans le main principal
+POSE_ESTIMATION:
+  NEED: "yes"
+  SAVE:
+    RGB: "yes"
+    BLACK: "no"
+    OTHER: "yes"
+    PATH_OTHER: "/home/pc/Documents/IMKI/tech.imki.AlphaPose/examples/test_pred/Other/"
+    JSON: "yes"
+  MODEL: 136   #17, 26
+  DRAW:
+    THICKNESS: 2
+    THRESH: 0.5
+    ONLY_ONE: "no"
+    
+
+
+
