@@ -1,5 +1,5 @@
 ## Use of dataset-gen 
-This code hav been developed following my need to generate or compute large dataset for deep-learning applications.
+This code hav been developed following my need to generate or compute large dataset for deep-learning applications.\
 Parameter must be written in [config file](configs/INSTALL.md)
 python main.py -cd config_downloader.yaml 
 
