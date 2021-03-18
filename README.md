@@ -1,4 +1,4 @@
-## Dataming-scripts
+## Dataming-scripts (January 2021)
 
 This code have been developed following my need to generate or compute large dataset for deep-learning applications.\
 Parameter must be written in [config file](configs/INSTALL.md)
